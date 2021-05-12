@@ -1,0 +1,937 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyltx package &mdash; PyLTX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ReadMe" href="../readme.html" />
+    <link rel="prev" title="Welcome to PyLTX’ documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #009ce3" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PyLTX
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyltx package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyltx.figure">pyltx.figure module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyltx.math">pyltx.math module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyltx.table">pyltx.table module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyltx.text">pyltx.text module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyltx.utils">pyltx.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">ReadMe</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyLTX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyltx package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/pyltx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyltx">
+<span id="pyltx-package"></span><h1>pyltx package<a class="headerlink" href="#module-pyltx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-pyltx.figure">
+<span id="pyltx-figure-module"></span><h2>pyltx.figure module<a class="headerlink" href="#module-pyltx.figure" title="Permalink to this headline">¶</a></h2>
+<p>Created on Wed Apr 14 19:46:52 2021</p>
+<p>&#64;author: n7</p>
+<dl class="py function">
+<dt id="pyltx.figure.fig">
+<code class="sig-name descname"><span class="pre">fig</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Body/figures'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stretch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h!'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/figure.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.figure.fig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filenames</strong> (<em>str</em><em> or </em><em>list</em>) – If str is supplied, the specified image will be added to the figure.
+If list is supplied, all the images in the images will be added to the
+figure.</p></li>
+<li><p><strong>loc</strong> (<em>str</em><em>, </em><em>optional</em>) – Location of the directory containing the figures in the LaTeX project.
+The default is “Body/figures”.</p></li>
+<li><p><strong>stretch</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether the image should be expanded to occupy the entire
+page width in multicolumn layouts. The default is False.</p></li>
+<li><p><strong>pos</strong> (<em>str</em><em>, </em><em>optional</em>) – LaTeX positioning scheme. The default is “h!”.</p></li>
+<li><p><strong>caption</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Caption for the figure. If None, the caption will not be added to the
+LaTeX figure code. The default is None.</p></li>
+<li><p><strong>ref</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Label for adding a reference tag to the figure. If None, no label will
+be added. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ltx</strong> – LaTeX code for the figure.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.figure.incl_image">
+<code class="sig-name descname"><span class="pre">incl_image</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/figure.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.figure.incl_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX command for including an image in the figure.
+(includegraphics/includesvg)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Full path of the image file in the LaTeX project.</p></li>
+<li><p><strong>width_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the width of image to the width of line-width.
+The default is 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX command for including an image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyltx.math">
+<span id="pyltx-math-module"></span><h2>pyltx.math module<a class="headerlink" href="#module-pyltx.math" title="Permalink to this headline">¶</a></h2>
+<p>Created on Wed Apr 14 22:45:08 2021</p>
+<p>&#64;author: n7</p>
+<dl class="py function">
+<dt id="pyltx.math.Pi">
+<code class="sig-name descname"><span class="pre">Pi</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.Pi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for product sign.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sb</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Subscript content (start condition) for the product. If None, no
+subscript is added. The default is None.</p></li>
+<li><p><strong>sp</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Superscript content (end condition) for the product. If None, no
+superscript is added. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for product sign.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.align">
+<code class="sig-name descname"><span class="pre">align</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.align" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for align environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eqs</strong> (<em>list</em>) – List of equations to be included in the align environment.</p></li>
+<li><p><strong>caption</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Caption for the align environment. If None, the caption will not be
+added to the LaTeX align code. The default is None.</p></li>
+<li><p><strong>ref</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Label for adding a reference tag to the align environment. If None,
+no label will be added. The default is None.</p></li>
+<li><p><strong>tag</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether equation numbers should be added.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX align environment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.box">
+<code class="sig-name descname"><span class="pre">box</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for data within box braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – String to be encapsulated within the box braces.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for data within box braces.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.ceil">
+<code class="sig-name descname"><span class="pre">ceil</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.ceil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for data within ceiling braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – String to be encapsulated within the ceil sign.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for data within ceiling braces.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.curly">
+<code class="sig-name descname"><span class="pre">curly</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.curly" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for data within curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – String to be encapsulated within the curly braces.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for data within curly braces.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.curved">
+<code class="sig-name descname"><span class="pre">curved</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.curved" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for data within curved braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – String to be encapsulated within the curved braces.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for data within curved braces.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.eqn">
+<code class="sig-name descname"><span class="pre">eqn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.eqn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for equation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eq</strong> (<em>str</em>) – Content to be encapsulated in the equation tags.</p></li>
+<li><p><strong>caption</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Caption for the equation. If None, the caption will not be added to the
+LaTeX equation code. The default is None.</p></li>
+<li><p><strong>ref</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Label for adding a reference tag to the equation. If None, no label
+will be added. The default is None.</p></li>
+<li><p><strong>tag</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether equation number should be added.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the equation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.floor">
+<code class="sig-name descname"><span class="pre">floor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.floor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for data within floor braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – String to be encapsulated within the floor sign.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for data within floor braces.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.frac">
+<code class="sig-name descname"><span class="pre">frac</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.frac" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX fraction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>str</em>) – Numerator for the fraction.</p></li>
+<li><p><strong>d</strong> (<em>str</em>) – Denominator for the fraction.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for fraction.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.inline">
+<code class="sig-name descname"><span class="pre">inline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.inline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for inline math content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – String to be encapsulated within the $ sign.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for inline math.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.mnm">
+<code class="sig-name descname"><span class="pre">mnm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.mnm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for min function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sb</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Subscript content (constraint) for the min. If None, no
+subscript is added. The default is None.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for summation sign.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.mxm">
+<code class="sig-name descname"><span class="pre">mxm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.mxm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for max function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sb</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Subscript content (constraint) for max. If None, no
+subscript is added. The default is None.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for summation sign.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.sbscr">
+<code class="sig-name descname"><span class="pre">sbscr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.sbscr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get LaTeX code for displaying the given content in subscript.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content to be displayed in subscript.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for subscripted content.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.sigma">
+<code class="sig-name descname"><span class="pre">sigma</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for summation sign.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sb</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Subscript content (start condition) for the summation. If None, no
+subscript is added. The default is None.</p></li>
+<li><p><strong>sp</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Superscript content (end condition) for the summation. If None, no
+superscript is added. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for summation sign.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.spscr">
+<code class="sig-name descname"><span class="pre">spscr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.spscr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get LaTeX code for displaying the given content in superscript.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content to be displayed in superscript.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for superscripted content.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.math.times">
+<code class="sig-name descname"><span class="pre">times</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/math.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.math.times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for multiplication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>str</em>) – First operand of multiplication.</p></li>
+<li><p><strong>b</strong> (<em>str</em>) – Second operand of multiplication.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for multiplication.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyltx.table">
+<span id="pyltx-table-module"></span><h2>pyltx.table module<a class="headerlink" href="#module-pyltx.table" title="Permalink to this headline">¶</a></h2>
+<p>Created on Wed Apr 14 17:07:40 2021</p>
+<p>&#64;author: n7</p>
+<dl class="py function">
+<dt id="pyltx.table.tab">
+<code class="sig-name descname"><span class="pre">tab</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'h!'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/table.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.table.tab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a DataFrame to a LaTeX Table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – DataFrame for which the LaTeX table will be created.</p></li>
+<li><p><strong>pos</strong> (<em>str</em><em>, </em><em>optional</em>) – LaTeX positioning scheme. The default is “h!”.</p></li>
+<li><p><strong>caption</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Caption for the table. If None, the caption will not be added to the
+LaTeX table code. The default is None.</p></li>
+<li><p><strong>col_style</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – LaTeX column formatting for the table. The default is None.</p></li>
+<li><p><strong>index</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether the row indices should be included as a separate
+column. The default is False.</p></li>
+<li><p><strong>ref</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Tag for adding a reference label to the table. If None, no label is
+added. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ltx</strong> – LaTeX code for the table.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.table.tabular">
+<code class="sig-name descname"><span class="pre">tabular</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/table.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.table.tabular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX tabular environment code for a DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – DataFrame for which the LaTeX tabularenvironment will be created.</p></li>
+<li><p><strong>col_style</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – LaTeX column formatting for the table. If None, |c|c|—|c| will be
+used. The default is None.</p></li>
+<li><p><strong>index</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether the row indices should be included as a separate
+column. The default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ltx</strong> – LaTeX code for the tabular environment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyltx.text">
+<span id="pyltx-text-module"></span><h2>pyltx.text module<a class="headerlink" href="#module-pyltx.text" title="Permalink to this headline">¶</a></h2>
+<p>Created on Wed Apr 14 18:45:27 2021</p>
+<p>&#64;author: n7</p>
+<dl class="py function">
+<dt id="pyltx.text.bf">
+<code class="sig-name descname"><span class="pre">bf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/text.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.text.bf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the bold text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Text to be represented in bold.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX bold format code for the given text.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.text.it">
+<code class="sig-name descname"><span class="pre">it</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/text.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.text.it" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the italisized text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Text to be represented in italics.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX italicisized format code for the given text.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.text.tt">
+<code class="sig-name descname"><span class="pre">tt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/text.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.text.tt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the courier text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Text to be represented in courier.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX courier format code for the given text.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.text.ul">
+<code class="sig-name descname"><span class="pre">ul</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/text.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.text.ul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the underlined text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Text to be represented with a underline.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX underlined format code for the given text.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyltx.utils">
+<span id="pyltx-utils-module"></span><h2>pyltx.utils module<a class="headerlink" href="#module-pyltx.utils" title="Permalink to this headline">¶</a></h2>
+<p>Created on Wed Apr 14 17:54:01 2021</p>
+<p>&#64;author: n7</p>
+<dl class="py function">
+<dt id="pyltx.utils.begin">
+<code class="sig-name descname"><span class="pre">begin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.begin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the “egin” tag, and an optional additional
+argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>str</em>) – Content to be put inside the “egin” command braces.</p></li>
+<li><p><strong>arg</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Additional argument to be added after the “egin” command. If None,
+no additional argument is used. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the “egin” command.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.capt">
+<code class="sig-name descname"><span class="pre">capt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.capt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX caption code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content to be put inside the “caption” command braces.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the caption.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.encaps">
+<code class="sig-name descname"><span class="pre">encaps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capt_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bottom'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addl_newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.encaps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encapsulate the given content within “begin” and “end” commands of the
+specified environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>str</em>) – Name of the LaTeX environment in which the content needs to be
+encapsulated.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – The LaTeX content to be encapsulated.</p></li>
+<li><p><strong>arg</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Additional argument to be added after the “begin” command. If None,
+no additional argument is used. The default is None.</p></li>
+<li><p><strong>center</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether centering should be applied to the environment.
+The default is False.</p></li>
+<li><p><strong>caption</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Caption for the environment. If None, no caption is added.
+The default is None.</p></li>
+<li><p><strong>capt_pos</strong> (<em>str</em><em>, </em><em>optional</em>) – Specifies the position of the caption in the environment. The
+accepted values are “top” and “bottom”. The default is “bottom”.</p></li>
+<li><p><strong>ref</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Tag for adding a reference label to the table. If None, no label is
+be added. The default is None.</p></li>
+<li><p><strong>addl_newline</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether to add a line-break after the ending the environment.
+The default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ltx</strong> – LaTeX code for the given environment parameters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.encapsln">
+<code class="sig-name descname"><span class="pre">encapsln</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capt_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bottom'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.encapsln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encapsulate the given content within “begin” and “end” commands of the
+specified environment., an add an line-break the end</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env</strong> (<em>str</em>) – Name of the LaTeX environment in which the content needs to be
+encapsulated.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – The LaTeX content to be encapsulated.</p></li>
+<li><p><strong>arg</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Additional argument to be added after the “begin” command. If None,
+no additional argument is used. The default is None.</p></li>
+<li><p><strong>center</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether centering should be applied to the environment.
+The default is False.</p></li>
+<li><p><strong>caption</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Caption for the environment. If None, no caption is added.
+The default is None.</p></li>
+<li><p><strong>capt_pos</strong> (<em>str</em><em>, </em><em>optional</em>) – Specifies the position of the caption in the environment. The
+accepted values are “top” and “bottom”. The default is “bottom”.</p></li>
+<li><p><strong>ref</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Tag for adding a reference label to the table. If None, no label is
+be added. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ltx</strong> – LaTeX code for the given environment parameters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.end">
+<code class="sig-name descname"><span class="pre">end</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the “end” tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content to be put inside the “end” command braces.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the “end” command.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.escape">
+<code class="sig-name descname"><span class="pre">escape</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.escape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace special characters (“&amp;, “%”, “_”) in the given string by their
+escape sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content in which special characters need to be replaced.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>content</strong> – Content with escape sequences for special characters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.inline_math_pts">
+<code class="sig-name descname"><span class="pre">inline_math_pts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.inline_math_pts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find start and end points of inline math in the given content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content in which inline math points need to be found.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Break-points of inline math in the given content.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.label">
+<code class="sig-name descname"><span class="pre">label</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX label code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>content</strong> (<em>str</em>) – Content to be put inside the “label” command braces.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the label.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.tag">
+<code class="sig-name descname"><span class="pre">tag</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the specified tag name, content and an optional
+additional argument</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of the LaTeX command.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – Content to be put inside the command braces.</p></li>
+<li><p><strong>arg</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Additional argument to be added after the command. The default is None.</p></li>
+<li><p><strong>newline</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifiec whether to add a line-break after the command.
+The default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the given command parameters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyltx.utils.tagln">
+<code class="sig-name descname"><span class="pre">tagln</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/matiyau/pyltx/tree/main/pyltx/utils.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyltx.utils.tagln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX code for the specified tag name, content and an optional
+additional argument with a line-break at the end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of the LaTeX command.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – Content to be put inside the command braces.</p></li>
+<li><p><strong>arg</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Additional argument to be added after the command. If None, no extra
+argument will be added. The default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX code for the given command parameters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../readme.html" class="btn btn-neutral float-right" title="ReadMe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to PyLTX’ documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Nishad Mandlik.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
